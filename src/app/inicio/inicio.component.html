@@ -1,0 +1,22 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+    <h2>Intranet - TuDesarrollo.com</h2>
+    <h3>Bienvenido</h3>
+    <p>¿Que deseas buscar hoy? ¿ticket, usuario o contacto?</p>
+    
+    <form (ngSubmit)="agenteAplicar()" class="name-form">
+      <input 
+        type="text" 
+        [(ngModel)]="palabraClave"
+        name="palabraClave"
+        placeholder="Ingresa tu búsqueda"
+        class="name-input"
+        required
+      />
+      <button type="submit" class="submit-btn">Buscar</button>
+      <button type="button" class="submit-btn2" (click)="limpiar()">Limpiar</button>
+    </form>
+
+    <div *ngIf="mensajeUsuario" class="info-message saltos-linea">{{ mensajeUsuario }}</div>
+  </div>
+</div>
